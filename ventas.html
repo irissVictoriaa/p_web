@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ventas Ferrari en la Fórmula 1</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #fff; 
+      color: #212529;
+    }
+    .navbar {
+      background-color: #ff0019;
+    }
+    .jumbotron {
+      background-image: url('ferrari.jpg'); 
+      background-size: cover;
+      color: rgb(0, 0, 0);
+    }
+    .product {
+      border: 1px solid #dee2e6;
+      border-radius: 5px;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+    .product:hover {
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .cart-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .cart-item img {
+      width: 50px;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">Ferrari F1 World</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="a.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="noticias.html">Noticias</a></li>
+        <li class="nav-item"><a class="nav-link" href="historia.html">Historia</a></li>
+        <li class="nav-item"><a class="nav-link" href="analisis.html">Análisis Técnico</a></li>
+        <li class="nav-item"><a class="nav-link" href="drivers.html">Nuestros pilotos</a></li>
+        <li class="nav-item"><button class="nav-link btn btn-link" data-toggle="modal" data-target="#carritoModal">Carrito <span class="badge badge-light" id="cartCount">0</span></button></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container text-center">
+    <h1 class="display-4">Bienvenido al mundo de Ferrari en la Fórmula 1</h1>
+    <p class="lead">Descubre nuestra colección de productos inspirados en la legendaria escudería Ferrari.</p>
+    <a class="btn btn-primary btn-lg" href="#productos" role="button">Ver productos</a>
+  </div>
+</div>
+
+<div id="productos" class="container">
+  <h2 class="text-center mb-4">Nuestros Productos</h2>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="product text-center">
+        <img src="gorrasainz.webp" class="img-fluid mb-3" alt="Gorra Ferrari">
+        <h3>Gorra Ferrari</h3>
+        <p>Demuestra tu pasión por Ferrari con esta gorra oficial del equipo.</p>
+        <button class="btn btn-secondary add-to-cart" data-product="Gorra Ferrari">Agregar al carrito</button>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="product text-center">
+        <img src="camisetaferrari.jpeg" class="img-fluid mb-3" alt="Camiseta Ferrari">
+        <h3>Camiseta Ferrari</h3>
+        <p>Luce el logotipo de Ferrari con estilo en esta camiseta de algodón suave.</p>
+        <button class="btn btn-secondary add-to-cart" data-product="Camiseta Ferrari">Agregar al carrito</button>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="product text-center">
+        <img src="llavero.jpeg" class="img-fluid mb-3" alt="Llavero Ferrari">
+        <h3>Llavero Ferrari</h3>
+        <p>Lleva contigo el emblema de Ferrari a donde quiera que vayas con este llavero elegante.</p>
+        <button class="btn btn-secondary add-to-cart" data-product="Llavero Ferrari">Agregar al carrito</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="carritoModal" tabindex="-1" role="dialog" aria-labelledby="carritoModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="carritoModalLabel">Carrito de Compras</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="carritoContent">
+       
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary" id="btnPagar">Pagar con Tarjeta</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    var cartItems = [];
+
+    $('.add-to-cart').click(function() {
+      var product = $(this).data('product');
+      var exists = false;
+
+      $.each(cartItems, function(index, item) {
+        if (item.product === product) {
+          item.quantity++;
+          exists = true;
+          return false;
+        }
+      });
+
+      if (!exists) {
+        cartItems.push({ product: product, quantity: 1 });
+      }
+
+      updateCart();
+    });
+
+    function updateCart() {
+      $('#carritoContent').empty();
+
+      $.each(cartItems, function(index, item) {
+        var cartItemHtml = '<div class="cart-item">';
+        cartItemHtml += '<img src="' + item.product.toLowerCase().replace(/\s/g, '') + '.jpg" alt="' + item.product + '" class="img-fluid">';
+        cartItemHtml += '<div>';
+        cartItemHtml += '<p>' + item.product + '</p>';
+        cartItemHtml += '<p>Cantidad: ' + item.quantity + '</p>';
+        cartItemHtml += '<button class="btn btn-danger btn-sm remove-from-cart" data-index="' + index + '">Eliminar</button>';
+        cartItemHtml += '<button class="btn btn-primary btn-sm add-one-to-cart" data-index="' + index + '">+</button>';
+        cartItemHtml += '<button class="btn btn-primary btn-sm remove-one-from-cart" data-index="' + index + '">-</button>';
+        cartItemHtml += '</div>';
+        cartItemHtml += '</div>';
+        
+        $('#carritoContent').append(cartItemHtml);
+      });
+
+      var totalItems = 0;
+      $.each(cartItems, function(index, item) {
+        totalItems += item.quantity;
+      });
+      $('#cartCount').text(totalItems);
+    }
+
+    $(document).on('click', '.remove-from-cart', function() {
+      var index = $(this).data('index');
+      cartItems.splice(index, 1);
+      updateCart();
+    });
+
+    $(document).on('click', '.add-one-to-cart', function() {
+      var index = $(this).data('index');
+      cartItems[index].quantity++;
+      updateCart();
+    });
+
+    $(document).on('click', '.remove-one-from-cart', function() {
+      var index = $(this).data('index');
+      cartItems[index].quantity--;
+      if (cartItems[index].quantity <= 0) {
+        cartItems.splice(index, 1);
+      }
+      updateCart();
+    });
+
+    
+    $('#btnPagar').click(function() {
+      window.location.href = 'pagina_de_pago.html';
+    });
+  });
+</script>
+
+</body>
+</html>
