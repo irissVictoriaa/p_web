@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferrari F1 World</title>
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background-color: rgba(250, 250, 250, 0);
+            color: black;
+        }
+
+        .navbar {
+            background-color: rgb(250, 4, 4);
+        }
+
+        .navbar-brand {
+            color: red;
+        }
+
+        .nav-link {
+            color: red;
+        }
+
+        .carousel-inner img {
+            width: 100%;
+            height: auto;
+        }
+
+        .calendar {
+            margin-top: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .event {
+            background-color: #fcfcfc;
+            border: 1px solid #fa0000;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .event img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        footer {
+            background-color: black;
+            color: red;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">Ferrari F1 World</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="noticias.html">Noticias</a></li>
+                        <li class="nav-item"><a class="nav-link" href="analisis.html">Análisis Técnico</a></li>
+                        <li class="nav-item"><a class="nav-link" href="historia.html">Historia y Logros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ventas.html">Tienda Oficial</a></li>
+                        <li class="nav-item"><a class="nav-link" href="drivers.html">Nuestros pilotos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container py-5">
+        <br>
+        <h2 class="mb-4">Ferrari F1 World - Tu destino para noticias, análisis y más sobre la Fórmula 1</h2>
+        <div id="carouselExampleControls" class="carousel slide mb-5" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="formula1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="autos.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="sf2444.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="vaqueros.webp" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="3ferrari.webp" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Siguiente</span>
+            </a>
+        </div>
+
+    
+        <div class="calendar">
+            <h2 class="mb-4">Calendario de Eventos</h2>
+            
+            <div class="event">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="calendario2024.jpg" alt="Evento 1">
+                    </div>
+                    <div class="col-md-8">
+                        <h3>Calendario F1 2024: Todas las fechas y circuitos de la temporada</h3>
+                        <p>Mira cómo es el calendario 2024 de Fórmula 1, con fechas, circuitos, número de carreras, cuándo empieza, dobletes de grandes premios, tripletes y más.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="event">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="circuito1.jpg" alt="Evento 1">
+                    </div>
+                    <div class="col-md-8">
+                        <h3>Gran Premio de Bahréin</h3>
+                        <p>Lugar: Sakhir, Bahréin.</p>
+                        <p>Fecha: Del 29 de febrero al 02 de marzo.</p>
+                        <p>Longitud: 5'412 km</p>
+                        <p>Curvas: 15</p>
+                    </div>
+                </div>
+            </div>
+            <div class="event">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="circuito2.jpg" alt="Evento 2">
+                    </div>
+                    <div class="col-md-8">
+                        <h3>Gran Premio de Arabia Saudi</h3>
+                        <p>Lugar: Yeda, Arabia Saudí.</p>
+                        <p>Fecha: Del 7 al 9 de marzo</p>
+                        <p>Longitud:  6'175 km</p>
+                        <p>Curvas: 27</p>
+                    </div>
+                </div>
+            </div>
+            <div class="event">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="circuito3.jpg" alt="Evento 3">
+                    </div>
+                    <div class="col-md-8">
+                        <h3>Gran Premio de Australia</h3>
+                        <p>Lugar: Melbourne, Australia</p>
+                        <p>Fecha: Del 22 al 24 de marzo</p>
+                        <p>Longitud: 5'303 km</p>
+                        <p>Curvas: 16</p>
+                    </div>
+                </div>
+            </div>
+            <div class="event">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="circuito4.jpg" alt="Evento 4">
+                    </div>
+                    <div class="col-md-8">
+                        <h3>Gran Premio de Japón</h3>
+                        <p>Lugar: Suzuka, Japón.</p>
+                        <p>Fecha: Del 5 al 7 de abril</p>
+                        <p>Longitud:  5'807 km</p>
+                        <p>Curvas: 18</p>
+                    </div>
+                </div>
+            </div>
+            <div class="event">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="circuito5.jpg" alt="Evento 5">
+                    </div>
+                    <div class="col-md-8">
+                        <h3>Gran Premio de China</h3>
+                        <p>Lugar: Shanghai, China</p>
+                        <p>Fecha: Del 19 al 21 de abril.</p>
+                        <p>Longitud:  5'451 km</p>
+                        <p>Curvas: 14</p>
+                    </div>
+                </div>
+            </div>
+            <div class="event">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="circuito6.jpg" alt="Evento 6">
+                    </div>
+                    <div class="col-md-8">
+                        <h3>Gran Premio de Miami</h3>
+                        <p>Lugar: Miami, Estados Unidos</p>
+                        <p>Fecha: Del 03 al 05 de mayo</p>
+                        <p>Longitud:  5'410 km </p>
+                        <p>Curvas: 19</p>
+                    </div>
+                </div>
+            </div>
+            <div class="event">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="circuito7.jpg" alt="Evento 7">
+                    </div>
+                    <div class="col-md-8">
+                        <h3>Gran Premio de Emilia Romaña</h3>
+                        <p>Lugar: Imola, Italia.</p>
+                        <p>Fecha: Del 17 al 19 de mayo</p>
+                        <p>Longitud: 5'410 km</p>
+                        <p>Curvas: 19</p>
+                    </div>
+                </div>
+            </div>
+            <div class="event">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="circuito8.jpg" alt="Evento 8">
+                    </div>
+                    <div class="col-md-8">
+                        <h3>Gran Premio de Mónaco </h3>
+                        <p>Lugar: Montecarlo, Mónaco</p>
+                        <p>Fecha: Del 24 al 26 de mayo</p>
+                        <p>Longitud: 3'340 km</p>
+                        <p>Curvas: 19</p>
+                    </div>
+                </div>
+            </div>
+            <div class="event">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="circuito9.jpg" alt="Evento 9">
+                    </div>
+                    <div class="col-md-8">
+                        <h3>Gran Premio de Canadá</h3>
+                        <p>Lugar: Montreal, Canadá</p>
+                        <p>Fecha: Del 7 al 9 de junio</p>
+                        <p>Longitud: 4'361 km</p>
+                        <p>Curvas: 12</p>
+                    </div>
+                </div>
+            </div>
+            <div class="event">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="circuito10.jpg" alt="Evento 10">
+                    </div>
+                    <div class="col-md-8">
+                        <h3>Gran Premio de España</h3>
+                        <p>Lugar: Montmeló, España</p>
+                        <p>Fecha: Del 21 al 23 de junio</p>
+                        <p>Longitud: 4'655 km</p>
+                        <p>Curvas: 16</p>
+                    </div>
+                </div>
+            </div>
+            <div class="event">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="circuito11.jpg" alt="Evento 11">
+                    </div>
+                    <div class="col-md-8">
+                        <h3>Gran Premio de Austria</h3>
+                        <p>Lugar: Knittelfeld, Austria</p>
+                        <p>Fecha: Del 28 al 30 de junio.</p>
+                        <p>Longitud: 4'326 km</p>
+                        <p>Curvas: 10</p>
+                    </div>
+                </div>
+            </div>
+            <div class="event">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="circuito12.jpg" alt="Evento 12">
+                    </div>
+                    <div class="col-md-8">
+                        <h3>Gran Premio de Gran Bretaña</h3>
+                        <p>Lugar: Silverstone, Gran Bretaña.</p>
+                        <p>Fecha: Del 05 al 07 de julio</p>
+                        <p>Longitud: 5'891 km</p>
+                        <p>Curvas: 18</p>
+                    </div>
+                </div>
+            </div>
+            <div class="event">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="circuito13.jpg" alt="Evento 13">
+                    </div>
+                    <div class="col-md-8">
+                        <h3>Gran Premio de Hungría</h3>
+                        <p>Lugar: Mogyoród, Hungría.</p>
+                        <p>Fecha: Del 19 al 21 de julio.</p>
+                        <p>Longitud: 4'381 km</p>
+                        <p>Curvas: 14</p>
+                    </div>
+                </div>
+            </div><div class="event">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="circuito14.jpg" alt="Evento 14">
+                    </div>
+                    <div class="col-md-8">
+                        <h3>Gran Premio de Bélgica</h3>
+                        <p>Lugar: Spa-Francorchamps, Bélgica</p>
+                        <p>Fecha: Del 26 al 28 de julio.</p>
+                        <p>Longitud: 7'004 km</p>
+                        <p>Curvas: 19</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center">
+        <p>&copy; 2024 Ferrari F1 World. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
