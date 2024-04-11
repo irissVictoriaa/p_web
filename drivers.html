@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ferrari F1 World</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .jumbotron {
+      background: url('ferrari_background.jpg') no-repeat center center;
+      background-size: cover;
+      color: rgb(0, 0, 0);
+    }
+    .navbar {
+        background-color: rgb(253, 0, 0);
+    }
+
+    .overlay {
+      background-color: rgba(255, 255, 255, 0.6);
+    }
+    .section-title {
+      color: #000000;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-red">
+  <div class="container">
+    <a class="navbar-brand" href="#">Ferrari F1 World</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="a.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="noticias.html">Noticias</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="analisis.html">Análisis Tecnico</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="historia.html">Historia y logros(2024)</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ventas.html">Tienda Oficial </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="drivers.html">Nuestros pilotos</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron jumbotron-fluid text-center">
+  <div class="container overlay">
+    <h1 class="display-4">Bienvenido a Ferrari F1 World</h1>
+    <p class="lead">Descubre quienes estan detras de los cascos y dentro del SF-24</p>
+    <p>En Ferrari, nos enorgullecemos de contar con algunos de los pilotos más talentosos y apasionados del mundo de la Fórmula 1. Con una rica historia de éxitos y una reputación legendaria en el mundo del automovilismo, nuestros pilotos encarnan el espíritu de la velocidad, la determinación y la excelencia. Desde los jóvenes talentos hasta los veteranos experimentados, cada uno de nuestros pilotos aporta su propio estilo y habilidades únicas a la pista. Con un compromiso inquebrantable con el equipo y una sed insaciable de victoria, están listos para enfrentar cualquier desafío y llevar a Ferrari a lo más alto del podio en cada carrera.</p>
+    <a class="btn btn-danger btn-lg" href="" role="button">Conoce a nuestros pilotos</a>
+  </div>
+</div>
+
+<section id="pilots" class="container py-5">
+  <h2 class="section-title text-center mb-4">Nuestros Pilotos</h2>
+  <div class="row">
+    <div class="col-md-6 mb-4">
+      <div class="card">
+        <img src="charles.jpg" class="card-img-top" alt="Piloto 1">
+        <div class="card-body">
+          <h5 class="card-title">Charles Marc Hervé Perceval Leclerc</h5>
+          <p class="card-text">Charles Leclerc nacido en Mónaco, 1996.Es un piloto 
+            que compite para el equipo Scuderia Ferrari de Fórmula 1. Leclerc
+             es uno de los grandes talentos de su generación. Su éxito arrollador 
+             en las categorías inferiores del deporte le convierte en uno de los
+              prospectos más interesantes del panorama internacional.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 mb-4">
+      <div class="card">
+        <img src="sainz.jpg" class="card-img-top" alt="Piloto 2">
+        <div class="card-body">
+          <h5 class="card-title">Carlos Sainz Vázquez de Castro​ </h5>
+          <p class="card-text">Carlos Sainz Vázquez de Castro​, más 
+            conocido como Carlos Sainz Jr. o simplemente Carlos Sainz, 
+            es un piloto de automovilismo español. De 2010 a 2014
+             formó parte del Equipo Júnior de Red Bull, ganando la 
+             Fórmula Renault NEC en 2011 y la Fórmula Renault 3.5 Series en 2014</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="videos" class="container py-5">
+  <h2 class="section-title text-center mb-4">Veamos Más Sobre Ellos</h2>
+  <div class="row">
+    <div class="col-md-6 mb-4">
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="carchar.mp4" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="col-md-6 mb-4">
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="chacar.mp4" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
